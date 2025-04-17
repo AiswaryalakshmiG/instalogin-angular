@@ -1,10 +1,10 @@
 <body>
-<div class="signup">
+  <div class="signup">
     <h1 class="heading1">Instagram</h1>
     <p class="tosee">Sign up to see photos and videos from your friends</p>
   
     <form (ngSubmit)="onSignup()" #signupForm="ngForm">
-      <input type="text" name="mail" [(ngModel)]="mail" placeholder="Mobile number or Email" required>
+      <input type="text" name="mail" [(ngModel)]="mailOrNum" placeholder="Mobile number or Email" required>
       <input type="text" name="fullname" [(ngModel)]="fullname" placeholder="Full Name">
       <input type="text" name="username" [(ngModel)]="username" placeholder="User Name" required>
       <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required>
@@ -17,6 +17,6 @@
   </div>
   
   <div class="login">
-    <p>Have an account? <a href="/login">Log in</a></p>
+    <p>Have an account? <a routerLink="/login">Log in</a></p>
   </div>
 </body>

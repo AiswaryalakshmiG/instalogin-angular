@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -6,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  mail = '';
+  mailOrNum = '';
   fullname = '';
   username = '';
   password = '';
 
-  
+  constructor(private router: Router) {}
 
   onSignup() {
     if (!this.username || !this.password) {
@@ -20,11 +21,11 @@ export class SignupComponent {
     }
 
     const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const newUser = { username: this.username, password: this.password };
+    const newUser = { mailOrNum:this.mailOrNum,fullname:this.fullname, username: this.username, password: this.password };
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Account created successfully! Please login.');
-   
+    this.router.navigate(['/login']);
   }
 }

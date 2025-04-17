@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,11 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
-  imageUrl = 'https://www.citypng.com/public/uploads/preview/hd-blue-and-white-square-facebook-fb-logo-70175169479235560lh86s7jg.png';
-    username = '';
+  username = '';
   password = '';
 
+  constructor(private router: Router) {}
 
   onLogin() {
     const users = JSON.parse(localStorage.getItem('users') || '[]');
@@ -18,8 +18,13 @@ export class LoginComponent {
 
     if (matchedUser) {
       alert('Login successful!');
+      this.router.navigate(['/homepage']);
     } else {
       alert('Invalid username or password!');
     }
+  }
+
+  forgot(){
+    
   }
 }
