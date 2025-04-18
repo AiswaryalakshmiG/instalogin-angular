@@ -8,8 +8,12 @@
         <div class="header">
           <h1 class="heading">Instagram</h1>
           <div class="icons">
-            <a routerLink="/notification"><i class="fa-solid fa-heart" ></i></a>
-            <a routerLink="/message"><i class="fa-solid fa-message"></i></a>
+            <a routerLink="/notification" class="heart">
+               <i class="fa-solid fa-heart" ></i>
+            </a>
+            <a routerLink="/message" class="msg">
+               <i class="fa-solid fa-message"></i>
+            </a>
           </div>
 
         </div>
@@ -20,10 +24,10 @@
       </div>
 
       <div class="main">
-         <router-outlet></router-outlet>
-         <p>Welcome to instagram</p>
-         <button (click)="like()">Like</button>
-         <p>{{likeCount}}</p>
+         <p>Welcome to instagram!</p>
+         <img src="assets/post.jpg" alt="post image" >
+         <button class="btn" (click)="like()">Like {{likeCount}}</button>
+        
       </div>
       <div class="navbar">
         
@@ -31,5 +35,5 @@
          <a routerLink="/search"><i class="fa-solid fa-magnifying-glass"></i></a>
          <a routerLink="/profile"><i class="fa-solid fa-circle-user"></i></a>
       </div>
-
+     
 </body>

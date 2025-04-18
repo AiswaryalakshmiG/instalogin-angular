@@ -1,65 +1,23 @@
-.friend-list {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .friend-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .friend {
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .friend:hover {
-    transform: scale(1.1);
-  }
-  
-  .friend img {
-    border-radius: 50%;
-    border: 2px solid #ccc;
-  }
-  
-  .friend p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .message-box {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .message-box button {
-    padding: 10px 20px;
-    background-color: #427cac;
-    color: white;
-    border: none;
+textarea {
+    padding: 10px;
+    border: 1px solid grey;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
+    resize: none;
+    margin-top: 10px;
+    width: 80%;
   }
   
-  .message-box button:hover {
-    background-color: #33536d;
-  }
-
-
-  .navbar{
-    text-align: center;
+.navbar{
     display: flex;
-    padding: 10px 20px;
+    padding: 10px 0;
     background-color: #f9f9f9;
   }
-  .home{
-    color:rgb(26, 75, 139) ;
-    font-weight: 400 ;
+
+.home, .search {
+    color: rgb(26, 75, 139);
+    font-weight: 400;
     font-size: 15px;
     text-decoration: none;
-  }
+    margin-right: 15px; 
+}

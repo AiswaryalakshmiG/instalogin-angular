@@ -1,21 +1,22 @@
 <body>
-    
-
-<div class="friend-list">
-  <h2>Select a Friend to Send a Message</h2>
-  <div class="friend-images">
-    <!-- <div *ngFor="let friend of friends" class="friend" (click)="selectFriend(friend.name)">
-      <img [src]="friend.image" [alt]="friend.name" width="50" height="50">
-      <p>{{ friend.name }}</p>
-    </div> -->
-  </div>
-</div>
-
-<div class="message-box">
-  <button (click)="sendMessage()">Send Message</button>
-</div>
-
-<div class="navbar">
+    <div class="friend-list" *ngIf="selectedFriend">
+      <h2>Chat with {{ selectedFriend }}</h2>
+      <div class="friend-images">
+        <div class="friend">
+          <img [src]="friendImage" [alt]="selectedFriend" width="60" height="60">
+          <p>{{ selectedFriend }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="message-box">
+      <textarea [(ngModel)]="message" rows="4" cols="40" placeholder="Type your message here..."></textarea><br>
+      <button (click)="sendMessage()">Send Message</button>
+    </div>
+  
+    <div class="navbar">
     <a routerLink="/homepage" class="home">Back to Homepage</a>
-  </div>
-</body>
+    <a routerLink="/search" class="search">Search</a>
+    </div>
+  </body>
+  

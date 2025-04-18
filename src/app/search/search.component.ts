@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -6,19 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  friendName: string = ''; // Input from the search bar
-  friends: string[] = ['ryan', 'kavi', 'jeevasri', 'balaji', 'maya']; // Static usernames
-  filteredFriends: string[] = []; // Filtered results
+  friendName: string = '';
+  friends: string[] = ['frd1', 'frd2', 'frd3', 'frd4'];
+  filteredFriends: string[] = [];
+
+  constructor(private router: Router) {}
 
   addFriend(): void {
-    // Filter the friends array based on the input
     this.filteredFriends = this.friends.filter(friend =>
       friend.toLowerCase() === this.friendName.toLowerCase()
     );
 
-    // If no match is found, clear the filteredFriends array
-    if (this.filteredFriends.length === 0) {
+    if (this.filteredFriends.length > 0) {
+      // Navigate to message component with the selected friend
+      this.router.navigate(['/message'], {
+        queryParams: { friend: this.filteredFriends[0] }
+      });
+    } else {
       this.filteredFriends = [];
     }
   }
 }
+

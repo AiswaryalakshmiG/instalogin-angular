@@ -22,7 +22,16 @@ body {
     margin-bottom: 20px;
 }
 
-img {
+
+.user {
+    width: 320px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.user img {
     display: block;
     margin: 10px auto;
     border-radius: 50%;
@@ -31,12 +40,9 @@ img {
     border: 2px solid #ddd;
 }
 
-.user {
-    width: 320px;
-    padding: 10px;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
+.user img:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 .button {
@@ -61,3 +67,16 @@ img {
 .button:active {
     transform: scale(0.95);
 }
+
+.navbar{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .home{
+    color:rgb(26, 75, 139) ;
+    font-weight: 400 ;
+    font-size: 15px;
+    text-decoration: none;
+  }
