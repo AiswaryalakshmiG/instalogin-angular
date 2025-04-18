@@ -9,10 +9,10 @@ export class MessageComponent {
   selectedFriend: string | null = null;
 
   friends = [
-    { name: 'frd1', image: 'assets/frd1.jpg' },
-    { name: 'frd2', image: 'assets/frd2.png' },
-    { name: 'frd3', image: 'assets/frd3.png' },
-    { name: 'frd4', image: 'assets/frd4.png' }
+    // { name: 'frd1', image: 'assets/frd1.jpg' },
+    // { name: 'frd2', image: 'assets/frd2.png' },
+    // { name: 'frd3', image: 'assets/frd3.png' },
+    // { name: 'frd4', image: 'assets/frd4.png' }
   ];
 
   selectFriend(friendName: string): void {

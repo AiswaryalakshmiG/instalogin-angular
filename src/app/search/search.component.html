@@ -1,26 +1,19 @@
 <body>   
-<p>search </p>
-<div class="search">
-<input type="text" name="friendName" [(ngModel)]="friendName"  placeholder="friend-name">
-<button (click)="addFriend()">Submit</button>
-<div *ngIf = "friends.length > 0; then friendList; else noData"></div>
-    <ng-template #friendList>
-<ul>
-    <li *ngFor="let friendName of friends">{{ friendName }}</li>
-</ul>
-</ng-template>
-<ng-template #noData>
-   <p>No Friends Available</p>
-</ng-template>
-</div>
-</body>
-<!-- <div *ngIf="notifications && notifications.length > 0; else noNotifications">
-    <ul>
-        <li *ngFor="let notification of notifications">
-            {{ notification.message }}
-        </li>
-    </ul>
-</div>
-<ng-template #noNotifications>
-    <p>No new notifications yet!</p>
-</ng-template> -->
+    <p>Search</p>
+    <div class="search">
+      <input type="text" name="friendName" [(ngModel)]="friendName" placeholder="Enter username">
+      <button (click)="addFriend()">Submit</button>
+      <div *ngIf="filteredFriends.length > 0; then friendList; else noData"></div>
+      <ng-template #friendList>
+        <ul>
+          <li *ngFor="let friend of filteredFriends">{{ friend }}</li>
+        </ul>
+      </ng-template>
+      <ng-template #noData>
+        <p>No user found</p>
+      </ng-template>
+    </div>
+    <div class="navbar">
+      <a routerLink="/homepage" class="home">Back to Homepage</a>
+    </div>
+  </body>

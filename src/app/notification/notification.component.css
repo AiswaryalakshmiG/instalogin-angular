@@ -27,18 +27,14 @@ h2 {
     font-size: 14px;
   }
   
-  /* button {
-    display: block;
-    margin: 20px auto;
+  .navbar{
+    display: flex;
     padding: 10px 20px;
-    background-color: #427cac;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #f9f9f9;
   }
-   */
-  /* button:hover {
-    background-color: #33536d;
-  } */
+  .home{
+    color:rgb(26, 75, 139) ;
+    font-weight: 400 ;
+    font-size: 15px;
+    text-decoration: none;
+  }
