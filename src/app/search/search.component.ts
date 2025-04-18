@@ -6,10 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  search='';
-  constructor() { }
 
-  ngOnInit(): void {
+  friends: string []= [];
+  friendName='';
+
+  addFriend()
+{
+  if(this.friendName){
+    this.friends.push(this.friendName);
+    this.friendName='';
+    console.log(this.friends);
   }
+}
+  constructor() { }
 
 }

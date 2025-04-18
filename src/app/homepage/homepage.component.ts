@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class HomepageComponent {
   
-
+likeCount: number = 0;
+like(){
+  this.likeCount++;
+  
+}
   constructor(private router: Router) {}
 
 
-  goToNotification(){
-    this.router.navigate(['/notification']);
-}
-
+ 
 }

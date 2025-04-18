@@ -1,0 +1,51 @@
+.friend-list {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .friend-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .friend {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .friend:hover {
+    transform: scale(1.1);
+  }
+  
+  .friend img {
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+  
+  .friend p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .message-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .message-box button {
+    padding: 10px 20px;
+    background-color: #427cac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .message-box button:hover {
+    background-color: #33536d;
+  }

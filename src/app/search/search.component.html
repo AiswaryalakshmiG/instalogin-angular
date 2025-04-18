@@ -1,2 +1,26 @@
+<body>   
 <p>search </p>
-<input type="text" name="search" [(ngModel)]="search"  placeholder="search somethig....">
+<div class="search">
+<input type="text" name="friendName" [(ngModel)]="friendName"  placeholder="friend-name">
+<button (click)="addFriend()">Submit</button>
+<div *ngIf = "friends.length > 0; then friendList; else noData"></div>
+    <ng-template #friendList>
+<ul>
+    <li *ngFor="let friendName of friends">{{ friendName }}</li>
+</ul>
+</ng-template>
+<ng-template #noData>
+   <p>No Friends Available</p>
+</ng-template>
+</div>
+</body>
+<!-- <div *ngIf="notifications && notifications.length > 0; else noNotifications">
+    <ul>
+        <li *ngFor="let notification of notifications">
+            {{ notification.message }}
+        </li>
+    </ul>
+</div>
+<ng-template #noNotifications>
+    <p>No new notifications yet!</p>
+</ng-template> -->
