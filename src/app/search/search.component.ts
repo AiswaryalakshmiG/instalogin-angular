@@ -19,7 +19,6 @@ export class SearchComponent {
     );
 
     if (this.filteredFriends.length > 0) {
-      // Navigate to message component with the selected friend
       this.router.navigate(['/message'], {
         queryParams: { friend: this.filteredFriends[0] }
       });
