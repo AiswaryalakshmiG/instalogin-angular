@@ -13,7 +13,7 @@ export class SearchComponent {
 
   constructor(private router: Router) {}
 
-  addFriend(): void {
+  searchFriend(): void {
     this.filteredFriends = this.friends.filter(friend =>
       friend.toLowerCase() === this.friendName.toLowerCase()
     );
